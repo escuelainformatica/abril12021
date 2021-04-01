@@ -1,0 +1,52 @@
+﻿@model List<abril12021.Models.Producto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listar</title>
+</head>
+<body>
+    <div>
+        <table border="1">
+            @foreach (var prod in ViewBag.listado)
+            {
+                <tr>
+                    <td>
+                        #@prod.Codigo
+                    </td>
+                    <td>
+                        @prod.Nombre
+                    </td>
+                    <td>
+                        @prod.Precio
+                    </td>
+                </tr>
+            }
+        </table>
+
+        <table border="1">
+            @foreach (var prod in Model)
+            {
+                <tr>
+                    <td>
+                        #@prod.Codigo
+                    </td>
+                    <td>
+                        @prod.Nombre
+                    </td>
+                    <td>
+                        @prod.Precio
+                    </td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿@model abril12021.Models.Producto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Formulario</title>
+</head>
+<body>
+    <div> 
+        <form method="post">
+            Codigo: <input type="text" name="Codigo" value="@Model.Codigo" /><br />
+            Nombre: <input type="text" name="Nombre" value="@Model.Nombre" /><br />
+            Precio: <input type="number" name="Precio" value="@Model.Precio" /><br />
+            <input type="submit" value="Enviar" />
+
+        </form>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+﻿@using abril12021.Models
+
+
+
+@model Producto
+
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <h1>Viewbag</h1>
+        <p>Ventajas: facil de trabajo. Es dinamico</p>
+        <p>Desventajas: es dinamico</p>
+        @ViewBag.cocacola.Nombre  <br />
+
+
+        <h2>Viewdata</h2>
+        <p>Ventajas: Se puede acceder mediante codigo</p>
+        <p>Desventaja: es que mucho mas engorroso</p>
+        @(((Producto)ViewData["fanta"]).Nombre)  <br />
+
+        <h3>Modelo</h3>
+        <p>Ventaja: no es dinamico</p>
+        <p>Desventaja: solamente puede haber un modelo</p>
+        @Model.Nombre
+
+
+
+
+
+    </div>
+</body>
+</html>
